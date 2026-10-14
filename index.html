@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoshi's</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .open-button {
+            padding: 20px 48px;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Ubuntu', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(-90deg, #44812d, #519837);
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 8px 32px rgba(81, 152, 55, 0.3);
+        }
+
+        .open-button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            box-shadow: 0 12px 40px rgba(81, 152, 55, 0.4);
+        }
+
+        .open-button:active {
+            transform: translateY(0);
+            filter: brightness(0.95);
+        }
+
+        .open-button:focus-visible {
+            outline: 3px solid #519837;
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 480px) {
+            .open-button {
+                padding: 18px 36px;
+                font-size: 20px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="open-button" id="openSiteBtn">Open Site</button>
+
+    <script src="cloak.js"></script>
+    <script>
+        document.getElementById('openSiteBtn').addEventListener('click', function() {
+            openCloaked('home.html', "Yoshi's Unblocked Games");
+            // Try to close the current tab (only works if opened by script)
+            window.close();
+        });
+    </script>
+</body>
+</html>
